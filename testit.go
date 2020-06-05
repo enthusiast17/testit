@@ -18,7 +18,7 @@ func NotEqual(t *testing.T, i1, i2 interface{}) {
 	if err := notEqual(i1, i2); err != nil {
 		t.Error(err)
 	}
-	t.Logf("PASS: [%v] is equal to [%v]", i1, i2)
+	t.Logf("PASS: [%v] is not equal to [%v]", i1, i2)
 }
 
 func equal(i1, i2 interface{}) error {
