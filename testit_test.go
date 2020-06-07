@@ -1,21 +1,24 @@
 package testit
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestItTest(t *testing.T) {
-	if a, b := 1, 1; equal(a, b) != nil {
-		t.Errorf("Expected [%v], got [%v]", a, b)
+	a, b := 1, 1
+	if err := equal(a, b); err != nil {
+		t.Errorf(failMessage, nil, err)
+	}
+	if err := notEqual(a, b); err == nil {
+		t.Errorf(failMessage, fmt.Errorf(failMessageNotEqual, a, b, a, b), err)
 	}
 
-	if a, b := 1, 1; notEqual(a, b) == nil {
-		t.Errorf("Expected [%v], got [%v]", a, b)
+	as, bs := "hello", "there"
+	if err := notEqual(as, bs); err != nil {
+		t.Errorf(failMessage, nil, err)
 	}
-
-	if a, b := "hello", "there"; notEqual(a, b) != nil {
-		t.Errorf("Expected [%v], got [%v]", a, b)
-	}
-
-	if a, b := "hello", "there"; equal(a, b) == nil {
-		t.Errorf("Expected [%v], got [%v]", a, b)
+	if err := equal(as, bs); err == nil {
+		t.Errorf(failMessage, fmt.Errorf(failMessageEqual, as, bs, as, bs), err)
 	}
 }
