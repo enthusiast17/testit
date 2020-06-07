@@ -9,8 +9,8 @@ var (
 	failMessage         = "FAIL: Expected [%v], got [%v]"
 	failMessageEqual    = "FAIL: Expected [%v == %v], got [%v != %v]"
 	failMessageNotEqual = "FAIL: Expected [%v != %v], got [%v == %v]"
-	passMessageEqual    = "PASS: [%v] is equal to [%v]"
-	passMessageNotEqual = "PASS: [%v] is not equal to [%v]"
+	passMessageEqual    = "PASS: [%v] == [%v]"
+	passMessageNotEqual = "PASS: [%v] != [%v]"
 )
 
 // Equal prints FAIL/PASS (1 interface is expected value, 2 interface is value for compare)
