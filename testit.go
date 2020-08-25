@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	message "./message"
+	message "message"
 )
 
 // Equal prints FAIL/PASS (1 interface is expected value, 2 interface is value for compare).
