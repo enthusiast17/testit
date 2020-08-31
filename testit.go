@@ -5,7 +5,7 @@ import (
 	"runtime"
 	"testing"
 
-	message "./message"
+	message "github.com/enthusiast17/testit/message"
 )
 
 // Equal prints FAIL/PASS (1 interface is expected value, 2 interface is value for compare).
