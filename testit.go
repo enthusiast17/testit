@@ -34,14 +34,14 @@ func NotEqual(t *testing.T, i1, i2 interface{}) {
 
 func equal(i1, i2, file, line interface{}) error {
 	if i1 != i2 {
-		return fmt.Errorf(message.FailEqual, i1, i2, i1, i2, file, line)
+		return fmt.Errorf(message.FailEqual, i1, i2, file, line)
 	}
 	return nil
 }
 
 func notEqual(i1, i2, file, line interface{}) error {
 	if i1 == i2 {
-		return fmt.Errorf(message.FailNotEqual, i1, i2, i1, i2, file, line)
+		return fmt.Errorf(message.FailNotEqual, i1, i2, file, line)
 	}
 	return nil
 }
